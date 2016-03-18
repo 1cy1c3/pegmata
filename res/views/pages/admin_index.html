@@ -1,0 +1,22 @@
+{* Show all pages *}
+{$message}
+<h3>{L_PAGES}</h3>
+<br>
+<table class="table table-striped" style="width: 400px">
+	{loop name="pages"}
+	<tr>
+		<td><b>{$title[pages]}</b></td>
+		<td align="right"><a href="/admin/pages/edit/{$id[pages]}"><button
+					class="btn btn-sm btn-primary">{L_EDIT}</button></a> <a
+			href="/admin/pages/delete/{$id[pages]}"><button
+					class="btn btn-sm btn-warning" onclick="return confirmDelete();">{L_DELETE}</button></a></td>
+		<div style="margin-top: 20px;">
+			<a href="/pages/view/{$alias[pages]}"> </a>
+		</div>
+	</tr>
+	{/loop name="pages"}
+</table>
+<br>
+<div>
+	<a href="/admin/pages/add/"><button class="btn btn-sm btn-success">{L_PAGE_NEW}</button></a>
+</div>

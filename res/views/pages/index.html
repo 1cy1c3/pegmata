@@ -1,0 +1,7 @@
+{* Show all pages *}
+<h3>{L_PAGES}</h3>
+{loop name="pages"}
+<div style="margin-top: 20px;">
+	<a href="/pages/view/{$alias[pages]}"> {$title[pages]} </a>
+</div>
+{/loop name="pages"}

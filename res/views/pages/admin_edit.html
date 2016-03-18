@@ -1,0 +1,23 @@
+{* Edit a page *}
+{$message}
+<h3>{L_PAGE_EDIT}</h3>
+<form method="post" action="">
+	<input type="hidden" name="id" value="{$id}" />
+	<div class="form-group">
+		<label for="alias">{L_ALIAS}</label> <input type="text" id="alias"
+			name="alias" value="{$alias}" class="form-control" />
+	</div>
+	<div class="form-group">
+		<label for="title">{L_TITLE}</label> <input type="text" id="title"
+			name="title" value="{$title}" class="form-control" />
+	</div>
+	<div class="form-group">
+		<label for="content">{L_CONTENT}</label>
+		<textarea id="content" name="content" class="form-control">{$content}</textarea>
+	</div>
+	<div class="form-group">
+		<label for="is_published">{L_PUBLISH}</label> <input type="checkbox"
+			id="is_published" name="is_published" {$isPublished} />
+	</div>
+	<input type="submit" class="btn btn-success" />
+</form>
