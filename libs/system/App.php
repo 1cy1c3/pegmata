@@ -38,6 +38,13 @@ class App {
 		
 		$session = new Session ();
 		$response = new Response ();
+		
+		$response->csp ();
+		$response->hsts ();
+		$response->nosniff ();
+		$response->xframe ();
+		$response->xss ();
+		
 		$route = self::$router->getRoute ();
 		if ($route == 'admin' && $session->get ( 'role' ) != 'admin') {
 			if ($controllerMethod != 'admin_login') {

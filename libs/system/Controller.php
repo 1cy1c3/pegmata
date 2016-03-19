@@ -73,7 +73,7 @@ abstract class Controller {
 		$this->model = $model;
 		$this->view = $view;
 		$this->data = $data;
-		$router = App::getRouter ()->getParams ();
+		$router = App::getRouter ();
 		$this->params = $router->getParams ();
 		$this->logger = Logger::getInstance ();
 		$langs [] = 'lang_' . $router->getLanguage () . '.php';
