@@ -25,7 +25,7 @@ mysql> SET autocommit=0; source pegmata.sql; COMMIT;
 mysql> EXIT
 ```
 After the import, go to `res/etc`, open the file `prod.php` and edit the database settings.
-```
+
 ## Usage
 For a better understanding, there are an example which uses this database. Explore the controllers (`PagesController`), models (`Pages`) and views (`pages/index.html`) regarding the backend and frontend. Otherwise, you're able to checkout this interaction in the user agent (`/pages`). At the moment, Pegmata supports:
 + MVC
